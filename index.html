@@ -1,0 +1,444 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DualShield IDS - Dual Intrusion Detection System</title>
+  <meta name="description" content="A prevention architecture for dual intrusion detection applying self-learning algorithms. Protect your network in real-time." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <nav id="navbar" class="navbar">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <span class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l7 4v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"></path>
+          </svg>
+        </span>
+        <span class="brand-text">DualShield IDS</span>
+      </a>
+
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="desktop-links">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#live-console">Live Console</a>
+        <a href="#performance">Performance</a>
+        <a href="#requirements">Requirements</a>
+        <a class="btn btn-primary btn-sm" href="#download">Download</a>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#features">Features</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#live-console">Live Console</a>
+      <a href="#performance">Performance</a>
+      <a href="#requirements">Requirements</a>
+      <a class="btn btn-primary btn-sm" href="#download">Download</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-image-wrap" aria-hidden="true">
+      <img class="hero-image" src="assets/hero-bg.jpg" alt="" />
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-radial"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="badge reveal">
+        <span class="pulse-dot"></span>
+        <span>Next-Gen Dual Intrusion Detection</span>
+      </div>
+
+      <h1 class="reveal">
+        <span class="fg">Protect Your</span><br />
+        <span class="gradient-text glow">Network</span>
+        <span class="fg"> in Real-Time</span>
+      </h1>
+
+      <p class="hero-copy reveal">
+        A prevention architecture combining self-learning AI algorithms -
+        <strong>LZ-JC-DBSCAN</strong>, <strong>EPRC-RPOA</strong>, and <strong>EG-GELU-GRU</strong> -
+        for autonomous threat detection, classification, and blocking.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary btn-lg" href="#download">Download for Windows</a>
+        <a class="btn btn-ghost btn-lg" href="#how-it-works">Learn How It Works</a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div>
+          <div class="gradient-text stat-value">99.68%</div>
+          <div class="stat-label">Detection Rate</div>
+        </div>
+        <div>
+          <div class="gradient-text stat-value">&lt;1s</div>
+          <div class="stat-label">Response Time</div>
+        </div>
+        <div>
+          <div class="gradient-text stat-value">0.02%</div>
+          <div class="stat-label">False Positives</div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator reveal" aria-hidden="true"><span></span></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Capabilities</span>
+          <h2>Why <span class="gradient-text">DualShield</span>?</h2>
+          <p>A next-generation intrusion detection system that does not just detect - it prevents.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"></path></svg>
+            </span>
+            <h3>Dual Detection Engine</h3>
+            <p>Combines unsupervised anomaly detection (LZ-JC-DBSCAN) with supervised deep learning (EG-GELU-GRU) for total threat coverage.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"></path></svg>
+            </span>
+            <h3>Real-Time Blocking</h3>
+            <p>Automated firewall orchestration translates AI decisions into instant IP blocking rules with sub-second response.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </span>
+            <h3>Zero-Day Detection</h3>
+            <p>Self-learning clustering identifies novel attack patterns without prior signatures and defends against unknown threats.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path></svg>
+            </span>
+            <h3>AI-Powered Optimization</h3>
+            <p>EPRC-RPOA feature selection reduces noise while preserving critical attack signatures for maximum precision.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </span>
+            <h3>Autonomous Prevention</h3>
+            <p>Goes beyond passive detection by actively blocking malicious traffic, quarantining threats, and enforcing policies.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-icon accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><rect x="7" y="11" width="3" height="7"></rect><rect x="12" y="8" width="3" height="10"></rect><rect x="17" y="5" width="3" height="13"></rect></svg>
+            </span>
+            <h3>Live Dashboard</h3>
+            <p>Real-time threat heatmaps, attack timelines, cluster visualizations, and blocking effectiveness for full visibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Architecture</span>
+          <h2>Dual Detection <span class="gradient-text">Architecture</span></h2>
+          <p>Three parallel AI modules work in concert and fuse into a unified threat prevention pipeline.</p>
+        </div>
+
+        <div class="image-frame reveal">
+          <img src="assets/architecture-diagram.jpg" alt="Dual IDS architecture diagram" />
+        </div>
+
+        <div class="module-grid">
+          <article class="module-card reveal">
+            <h3>LZ-JC-DBSCAN</h3>
+            <h4>Unsupervised Clustering</h4>
+            <p>Detects novel anomalies and zero-day attacks using Lempel-Ziv complexity and Jaccard similarity.</p>
+          </article>
+          <article class="module-card reveal">
+            <h3>EPRC-RPOA</h3>
+            <h4>Feature Optimization</h4>
+            <p>Entropy-based pruning with recursive optimization keeps the most discriminative flow attributes.</p>
+          </article>
+          <article class="module-card reveal">
+            <h3>EG-GELU-GRU</h3>
+            <h4>Deep Classification</h4>
+            <p>GRU-based sequence modeling with GELU activation tracks temporal attack behavior in real time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pipeline</span>
+          <h2>How It <span class="gradient-text">Works</span></h2>
+          <p>From raw network traffic to autonomous threat prevention in milliseconds.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-num">01</div>
+            <div>
+              <h3>Traffic Capture</h3>
+              <p>Network packets are captured in real-time and stored as rotating PCAP files.</p>
+              <div class="tag-row"><span>tshark</span><span>PCAP</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-num">02</div>
+            <div>
+              <h3>Flow Extraction and Preprocessing</h3>
+              <p>PCAP files are converted into structured CSV flows with normalization, outlier handling, and temporal windowing.</p>
+              <div class="tag-row"><span>CICFlowMeter</span><span>CSV</span><span>80+ Features</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-num">03</div>
+            <div>
+              <h3>Hybrid AI Detection Engine</h3>
+              <p>Three parallel modules analyze traffic together: clustering, feature optimization, and deep sequence classification.</p>
+              <div class="tag-row"><span>LZ-JC-DBSCAN</span><span>EPRC-RPOA</span><span>EG-GELU-GRU</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-num">04</div>
+            <div>
+              <h3>Decision Fusion</h3>
+              <p>Weighted confidence scoring combines all engine outputs into final threat classification.</p>
+              <div class="tag-row"><span>Ensemble</span><span>Confidence Scoring</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-num">05</div>
+            <div>
+              <h3>Autonomous Prevention</h3>
+              <p>Malicious flows trigger automatic blocking and alerts while safe traffic proceeds without friction.</p>
+              <div class="tag-row"><span>Firewall Rules</span><span>Dashboard Alerts</span><span>Blocking</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="performance" class="section section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Benchmarks</span>
+          <h2>Proven <span class="gradient-text">Performance</span></h2>
+          <p>Evaluated on CIC-DDoS2019 with industry-standard metrics.</p>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card reveal"><div class="counter" data-target="99.68" data-suffix="%">0%</div><h3>Accuracy</h3><p>CIC-DDoS2019 benchmark</p></article>
+          <article class="metric-card reveal"><div class="counter" data-target="99.50" data-suffix="%">0%</div><h3>Precision</h3><p>Minimal false positives</p></article>
+          <article class="metric-card reveal"><div class="counter" data-target="99.70" data-suffix="%">0%</div><h3>Recall</h3><p>Near-zero missed attacks</p></article>
+          <article class="metric-card reveal"><div class="counter" data-target="99.60" data-suffix="%">0%</div><h3>F1-Score</h3><p>Balanced performance</p></article>
+          <article class="metric-card reveal"><div class="counter" data-target="0.998" data-precision="3">0</div><h3>ROC-AUC</h3><p>Superior classification</p></article>
+          <article class="metric-card reveal"><div class="gradient-text fixed-stat">&lt;500ms</div><h3>Max Latency</h3><p>Real-time inference</p></article>
+        </div>
+
+        <div class="comparison reveal">
+          <h3>Comparison with Existing IDS</h3>
+          <div class="comparison-row">
+            <div class="comparison-head"><span class="highlight">DualShield (Ours)</span><span>99.68%</span></div>
+            <div class="bar"><div class="bar-fill highlight" data-width="100"></div></div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-head"><span>DNN-based IDS (Osa 2024)</span><span>99.68%</span></div>
+            <div class="bar"><div class="bar-fill" data-width="99.8"></div></div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-head"><span>Hybrid Fuzzy-NN-GA (Ishaque 2023)</span><span>99.12%</span></div>
+            <div class="bar"><div class="bar-fill" data-width="93"></div></div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-head"><span>Ensemble ML (Hossain 2023)</span><span>99.01%</span></div>
+            <div class="bar"><div class="bar-fill" data-width="91"></div></div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-head"><span>Real-time DNN (Vishwakarma 2022)</span><span>93.02%</span></div>
+            <div class="bar"><div class="bar-fill" data-width="72"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Setup</span>
+          <h2>System <span class="gradient-text">Requirements</span></h2>
+          <p>Runs efficiently on standard hardware. No GPU required for inference.</p>
+        </div>
+
+        <div class="requirements-grid">
+          <article class="req-card reveal">
+            <h3>Hardware Requirements</h3>
+            <ul>
+              <li><strong>Processor:</strong> Intel i5 / AMD Ryzen 5 or equivalent (multi-core)</li>
+              <li><strong>RAM:</strong> 8-16 GB recommended</li>
+              <li><strong>Storage:</strong> 50-100 GB for datasets, PCAP files, and models</li>
+            </ul>
+          </article>
+          <article class="req-card reveal">
+            <h3>Software Requirements</h3>
+            <ul>
+              <li><strong>Operating System:</strong> Windows 10/11 laptop or desktop</li>
+              <li><strong>Runtime:</strong> Standalone Windows EXE, no Python installation required</li>
+              <li><strong>Network Tools:</strong> Built-in live capture (Scapy + CICFlowMeter pipeline) and offline PCAP analysis are both supported</li>
+              <li><strong>Libraries:</strong> Model, UI assets, and Python dependencies are bundled into the packaged release</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="live-console" class="section section-dark">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Controller</span>
+          <h2>Live Monitoring <span class="gradient-text">Console</span></h2>
+          <p>Start or stop automatic capture, verify controller health, and watch both network and file detections appear without manual PCAP uploads.</p>
+        </div>
+
+        <article class="live-panel reveal">
+          <div class="live-topbar">
+            <div>
+              <p class="platform">Localhost API</p>
+              <h3 id="monitorStatusText">Checking live monitoring status...</h3>
+              <p id="monitorMeta" class="build-meta">Controller endpoint: <code>http://127.0.0.1:8010</code></p>
+              <p id="adminWarning" class="build-meta muted">Run the packaged app to activate automatic live capture and this browser console.</p>
+            </div>
+            <div class="control-row">
+              <button id="startMonitoringBtn" class="btn btn-primary btn-sm" type="button">Start Monitoring</button>
+              <button id="stopMonitoringBtn" class="btn btn-ghost btn-sm" type="button">Stop Monitoring</button>
+            </div>
+          </div>
+
+          <div class="status-grid">
+            <div class="status-card">
+              <span class="status-label">Controller</span>
+              <strong id="controllerState">Waiting</strong>
+            </div>
+            <div class="status-card">
+              <span class="status-label">Capture Mode</span>
+              <strong id="captureState">Automatic</strong>
+            </div>
+            <div class="status-card">
+              <span class="status-label">Dashboard Feed</span>
+              <strong id="dashboardState">Auto Refresh</strong>
+            </div>
+          </div>
+
+          <div class="event-table-wrap">
+            <table class="event-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Detection Type</th>
+                  <th>Result</th>
+                  <th>Attack Type</th>
+                  <th>Original File</th>
+                  <th>PCAP File</th>
+                  <th>Source</th>
+                </tr>
+              </thead>
+              <tbody id="liveEventsBody">
+                <tr>
+                  <td colspan="7">Waiting for local controller data...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="download" class="section section-dark">
+      <div class="container narrow center">
+        <div class="section-head reveal">
+          <span class="eyebrow">Download</span>
+          <h2>Get <span class="gradient-text">DualShield</span> Now</h2>
+          <p>Install once and keep protection active in the background with live network and file monitoring.</p>
+        </div>
+
+        <div class="download-grid">
+          <article class="download-card primary reveal">
+            <p class="platform">Windows</p>
+            <h3>Dual IDS Guard</h3>
+            <p id="buildMeta" class="build-meta">Portable ZIP release hosted on GitHub Releases.</p>
+            <p class="build-meta">v3.0: Hybrid IDS with automatic PCAP analysis and file malware scanning.</p>
+            <a id="downloadExeBtn" class="download-link full" href="../release/DualIDSGuardAgent_v3.0.zip">
+              <button class="btn btn-primary btn-lg full" type="button">Download for Windows</button>
+            </a>
+            <p id="buildChecksum" class="build-meta muted">Release asset: DualIDSGuardAgent_v3.0.zip</p>
+            <div class="download-steps">
+              <p>Steps:</p>
+              <ol>
+                <li>Download the ZIP file</li>
+                <li>Extract it</li>
+                <li>Double-click the EXE</li>
+                <li>If Windows shows warning - Click "More Info" - "Run Anyway"</li>
+              </ol>
+            </div>
+          </article>
+        </div>
+
+        <div class="trust-row reveal">
+          <span>Free and Open Source</span>
+          <span>Runs in Background</span>
+          <span>Always-On Protection</span>
+          <span>Hybrid Network + File Detection</span>
+          <span>No Data Collection</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div class="brand">
+        <span class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l7 4v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"></path>
+          </svg>
+        </span>
+        <span class="brand-text">DualShield IDS</span>
+      </div>
+      <p>A Prevention Architecture for Dual Intrusion Detection Applying Self-Learning Algorithms.</p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <span id="copyrightYear"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
